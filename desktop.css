@@ -1,0 +1,611 @@
+/* importing.... google fonts cdn  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap");
+
+:root {
+  --font-1: "Poppins", sans-serif;
+  --font-2: "Raleway", sans-serif;
+
+  --orange-color: #da722c;
+  --dark-blue-color: #057ada;
+  --light-color: #e8f7fb;
+  --dark-color: #070917;
+  --teal-color: #023047;
+  --light-blue-color: #6f7dfb;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-1);
+}
+
+/* wrapper design */
+.wrapper {
+  max-width: 1134px;
+  margin: 0 auto;
+}
+
+/*? buttons design start */
+
+.btn {
+  padding: 16px 32px;
+  border-radius: 24px;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  /* relative position  */
+  position: relative;
+}
+
+.btn.dark {
+  background: var(--teal-color);
+}
+
+.btn.light {
+  background: var(--orange-color);
+}
+
+.btn.enroll-icon::before {
+  content: url("images/enroll-icon.svg");
+  /* position absolute  */
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translateY(-50%);
+}
+
+.btn.enroll-icon {
+  padding-left: 60px;
+}
+
+/*? buttons design end */
+
+/* header design start  */
+/* header  */
+header {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  height: 100vh;
+  width: 100%;
+}
+
+/* nav  */
+nav {
+  /* flexbox  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position fixed  */
+  position: fixed;
+  width: 1134px;
+  top: 0;
+  padding: 36px 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+/* nav scrolled  */
+nav.scrolled {
+  background: var(--dark-color);
+  box-shadow: 0 16px 14px -8px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 8px 8px;
+  top: 0;
+  padding: 12px;
+}
+
+/* nav logo  */
+nav .logo {
+  color: #fff;
+  font-family: var(--font-2);
+  font-size: 40px;
+  font-weight: 900;
+}
+
+/* nav ul  */
+nav ul {
+  /* flexbox  */
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  font-family: var(--font-1);
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* hero section design start  */
+/* hero section  */
+.hero-section {
+  /* flexbox  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding-top: 60px;
+}
+
+/* left div  */
+.hero-section .left {
+  flex: 1;
+}
+
+/* left div main title  */
+.hero-section .left h1 {
+  color: #fff;
+  font-family: var(--font-2);
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 125%;
+  margin-bottom: 0;
+}
+
+/* left div description text  */
+.hero-section .left p {
+  color: #fff;
+  font-family: var(--font-1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 200%;
+  margin-bottom: 30px;
+  width: 457px;
+}
+
+/* right div  */
+.hero-section .right {
+  align-self: flex-end;
+}
+
+/* right div image  */
+.hero-section .right img {
+  height: 540px;
+  vertical-align: middle;
+}
+
+/* achievement card  */
+.achievement-card {
+  /* position absolute  */
+  position: absolute;
+  min-width: 200px;
+}
+
+/* content  */
+.achievement-card .content {
+  border-radius: 24px;
+  background: #fff;
+  padding: 8px 32px;
+  /* position  relative */
+  position: relative;
+  z-index: 10;
+}
+
+/* student enrolled  */
+.achievement-card.student-enrolled {
+  left: 48%;
+  top: 290px;
+}
+
+/* overall rating  */
+.achievement-card.overall-rating {
+  left: 45%;
+  top: 470px;
+}
+
+.achievement-card .content div {
+  /* flexbox  */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.achievement-card h3 {
+  color: var(--teal-color);
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-1);
+  font-size: 36px;
+  font-weight: 700;
+  width: 100%;
+  flex: 1;
+}
+
+.achievement-card img {
+  flex: 1;
+  height: 42px;
+  margin-left: -24px;
+}
+
+.achievement-card p {
+  color: var(--teal-color);
+  font-family: var(--font-1);
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+/* bg  */
+.achievement-card .bg {
+  /* position absolute  */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #6f7dfb 0%, #3b448f 100%);
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+}
+/* hero section design end */
+/* header design end */
+
+/* testimonial section design start  */
+/* section  */
+section {
+  margin-top: 100px;
+}
+
+h2 {
+  color: var(--teal-color);
+  font-family: var(--font-2);
+  font-size: 60px;
+  font-weight: 900;
+}
+
+h2.light {
+  color: #fff;
+}
+
+section p {
+  color: var(--teal-color);
+  font-family: var(--font-1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 200%;
+  margin: 12px 0;
+}
+
+/* testimonial section  */
+.testimonial-section {
+  /* flexbox  */
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+/* mobile button  */
+.testimonial-section .mobile-btn {
+  display: none;
+}
+
+/* testimonial card  */
+.testimonial-section .testimonial-card {
+  width: 442px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0px 9px 36px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+  /* position relative  */
+  position: relative;
+}
+
+.testimonial-section .testimonial-card::before {
+  content: "";
+  width: 28px;
+  position: absolute;
+  height: 40px;
+  top: -40px;
+  left: 60px;
+  background-color: var(--teal-color);
+  border-radius: 24px 24px 0 0;
+}
+
+.testimonial-section .testimonial-card:last-child:before {
+  left: 40px;
+  top: -50px;
+  border-radius: 0 0 24px 24px;
+  height: calc(100% + 90px);
+  z-index: -1;
+}
+
+/* content  */
+.testimonial-section .testimonial-card .content {
+  color: #fff;
+  font-family: var(--font-2);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 150%;
+  border-radius: 24px;
+  padding: 24px 32px;
+  background: var(--light-blue-color);
+}
+
+.testimonial-section .testimonial-card:last-child .content {
+  background: var(--orange-color);
+}
+
+/* info  */
+.testimonial-section .testimonial-card .info {
+  padding: 24px 32px;
+  background: #fff;
+  border-radius: 24px;
+}
+
+/* info h4  */
+.testimonial-section .testimonial-card .info h4 {
+  color: var(--teal-color);
+  font-family: var(--font-2);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 120%;
+  margin: 0;
+}
+
+/* info p company  */
+.testimonial-section .testimonial-card .info p.company {
+  color: var(--teal-color);
+  font-family: var(--font-2);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+/* card image  */
+.testimonial-section .testimonial-card img {
+  width: 120px;
+  height: 120px;
+  /* position absolute  */
+  position: absolute;
+  right: 32px;
+  bottom: 20px;
+}
+
+.testimonial-section .testimonial-card:last-child {
+  transform: translateX(20px);
+}
+
+/* features  */
+.testimonial-section .features {
+  margin-bottom: 30px;
+}
+
+/* testimonial section design end  */
+
+/* courses section design start  */
+.courses-section {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  padding: 70px 0;
+  padding-bottom: 120px;
+}
+
+.courses-section h2 {
+  text-align: center;
+}
+
+/* course cards  */
+.courses-section .course-cards {
+  /* flexbox  */
+  display: flex;
+  gap: 70px;
+}
+
+/* course cards image  */
+.courses-section .course-cards img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* course card  */
+.courses-section .course-card {
+  padding: 0 32px;
+  border-radius: 24px;
+  background: #fff;
+  margin: 40px 0;
+  /* position relative  */
+  position: relative;
+}
+
+.courses-section .course-card::after {
+  content: "";
+  height: 8px;
+  /* position absolute  */
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 0;
+  background: var(--teal-color);
+  border-radius: 24px;
+}
+
+/* course card h3  */
+.courses-section .course-cards h3 {
+  color: var(--teal-color);
+  font-family: var(--font-2);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 150%;
+}
+
+/* course card info  */
+.courses-section .course-cards .info {
+  /* flexbox  */
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* duration  */
+.courses-section .course-card .duration {
+  color: var(--teal-color);
+  font-family: var(--font-2);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 150%;
+  /* position relative  */
+  position: relative;
+  padding-left: 20px;
+}
+
+.courses-section .course-card .duration::before {
+  content: url(images/Clock.svg);
+  position: absolute;
+  top: 2px;
+  left: -6px;
+}
+
+.courses-section .wrapper {
+  position: relative;
+}
+
+.courses-section .wrapper .btn {
+  /* position absolute  */
+  position: absolute;
+  right: 0;
+}
+/* courses section design end */
+
+/* app section design start  */
+/* app section  */
+.app-section {
+  text-align: center;
+}
+
+/* app buttons  */
+.app-section .app-buttons {
+  /* flex box  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 23px;
+}
+
+/* app button  */
+.app-section .app-btn {
+  padding: 16px 31px;
+  background: #000;
+  color: #fff;
+  /* flexbox  */
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 310px;
+  cursor: pointer;
+}
+
+/* app button text  */
+.app-section .app-btn span {
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-1);
+  font-size: 20px;
+  font-weight: 400;
+}
+/* app section design end */
+
+/* footer design start  */
+/* footer  */
+footer {
+  background: var(--dark-color);
+  color: #fff;
+  margin-top: 100px;
+  padding: 70px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer h3 {
+  color: var(--orange-color);
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+footer ul li {
+  margin: 16px 0;
+}
+
+/* links container  */
+footer .links-container {
+  /* grid  */
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr;
+}
+
+/* social  */
+footer .social {
+  margin-left: 20px;
+}
+
+footer .social a {
+  margin-right: 28px;
+}
+
+/* form  */
+footer form {
+  margin-left: 20px;
+  margin-top: 16px;
+  /* position relative  */
+  position: relative;
+}
+
+/* form input  */
+footer form input {
+  color: #000;
+  font-family: var(--font-1);
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 200%;
+  border-radius: 8px;
+  padding: 8px 160px 8px 32px;
+  border: none;
+  width: 100%;
+}
+
+/* form subscribe button  */
+footer form .submit-btn {
+  /* position absolute  */
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--teal-color);
+  border-radius: 8px;
+  padding: 8px 32px;
+  color: #fff;
+  border: 0;
+  font-family: var(--font-1);
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* footer copyright  */
+footer .copyright {
+  margin-top: 36px;
+}
+/* footer design end */
+
+nav.mobile-nav,
+.mobile-menu-container {
+  display: none;
+}
